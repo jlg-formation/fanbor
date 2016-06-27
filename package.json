@@ -1,0 +1,14 @@
+{
+  "name": "exo",
+  "version": "0.0.1",
+  "description": "exo pour angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean-Louis GUENEGO",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "1.7.9"
+  }
+}
