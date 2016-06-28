@@ -12,7 +12,7 @@
 		}
 		return result;
 	};
-	
+
 	var a = {
 		a: 2,
 		b: { x: 3 }
@@ -23,5 +23,5 @@
 	b.b.x = 5;
 	console.log('a.b.x', a.b.x);
 	console.log('b.b.x', b.b.x);
-	
+
 })();
