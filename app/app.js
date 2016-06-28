@@ -3,6 +3,10 @@
 
 	var app = angular.module('mainApp', ['ors-star']);
 
+	app.run([ '$rootScope', function($rootScope) {
+		$rootScope.myNote = 2;
+	}]);
+	
 	app.directive('orsHeader', function() {
 		return {
 			restrict: 'CEA',
