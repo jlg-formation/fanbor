@@ -9,12 +9,16 @@
 		<!-- endbuild -->
 	</head>
 	<body ng-app="mainApp" ng-cloak>
+		<span us-spinner spinner-on="{{s.showSpinner}}"></span>
+		showSpinner = {{s.showSpinner}}
 		<ors-header></ors-header>
 		<ors-body></ors-body>
 		<ors-footer></ors-footer>
 		<!-- build:js -->
 		<script target="vendors" src="../bower_components/angular/angular.js"></script>
 		<script target="vendors" src="../bower_components/angular-route/angular-route.js"></script>
+		<script target="vendors" src="../bower_components/spin.js/spin.js"></script>
+		<script target="vendors" src="../bower_components/angular-spinner/angular-spinner.js"></script>
 		<script target="app" src="app.js"></script>
 		<script target="app" src="ors-star/ors-star.js"></script>
 		<script target="app" src="ors-ws/ors-ws.js"></script>
