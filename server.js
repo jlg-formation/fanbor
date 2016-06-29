@@ -13,6 +13,10 @@
 
 	app.use(express.static('.'));
 	app.use(serveIndex('.', {icons: true}));
+	
+	app.get('/ws/now', function(req, res) {
+		res.json({now: new Date()});
+	});
 
 	app.use(function(req, res, next) {
 		console.log('404: Page not Found', req.url);
