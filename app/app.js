@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('templates', []);
-	var app = angular.module('mainApp', ['ors-star', 'templates', 'ngRoute']);
+	var app = angular.module('mainApp', ['ors-star', 'ors-ws', 'templates', 'ngRoute']);
 
 	app.config(['$routeProvider', function($routeProvider) {
 
@@ -11,7 +11,9 @@
 				templateUrl: 'tmpl/menu/home.html'
 			})
 			.when('/products', {
-				templateUrl: 'tmpl/menu/products.html'
+				templateUrl: 'tmpl/menu/products.html',
+				controller: 'ors-ws.Ctrl',
+				controllerAs: 'ctrl'
 			})
 			.when('/services', {
 				templateUrl: 'tmpl/menu/services.html'
