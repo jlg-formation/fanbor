@@ -8,12 +8,15 @@
 		
 		var $http = $injector.get('$http');
 		var $q = $injector.get('$q');
+		var $rootScope = $injector.get('$rootScope');
 		
 		$q.when('').then(function(response) {
 			console.log('appel marcel 2s', response);
 			return $http.get('/ws/marcel');
 		}).then(function(response) {
+			$rootScope.marcel = response.data.prenom;
 			console.log('appel simultané de herve, philippe et fabien ', response);
+			
 			return $q.all([
 				$http.get('/ws/herve'),
 				$http.get('/ws/philippe'),
